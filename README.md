@@ -143,6 +143,96 @@ WAP to determine the perimeter of the island!
 
 [LeetCode #463][LC463]
 
+## Question 13 ##
+
+Given $N$ courses labelled $\{0,\ldots,N-1\}$ and a
+list of prerequisites $R$ such that the courses
+$R[i]\equiv\{a_i,b_i,\ldots\}$ are required to be
+completed before enrolling for $i$-th course.
+
+WAP to determine if all the $N$ courses can be
+completed successfully by a candidate.  If so, also
+determine one of the feasible ordering of courses.
+
+**Examples**
+1. $N=2$, $R=[\emptyset,\{0\}]$ means that course $1$
+   requires course $0$ as pre-requisite.  Hence, it is
+   possible to complete the courses, in the following
+   order: $[0,1]$.
+2. $N=2$, $R=[\{1\},\{0\}]$. Here, the requirement is
+   $1$ before $0$; and also $0$ before $1$.  This,
+   hence, is impossible.
+
+## Question 14 ##
+
+Given a [DAG](#dag) $G(V,E)$, WAP to determine the list
+of ancestors for each node.
+
+## Question 15 ##
+
+There are $N$ cities, connected by flights.  Given the
+list of flights $F\equiv\{(s_i,d_i,p_i):0<i\leqslant
+N\}$ so that $i$-th flight connects the source city
+$s_i$ to destination city $d_i$ for a cost-price of
+$p_i$.
+
+Given $A,B,k$, WAP to determine **the cheapest price**
+to connect city $A$ to city $B$ with maximum $k$ stops.
+
+![](./assets/flights.png)
+
+**Examples** (Optimal paths marked in red)
+
+1. $N=4, F\equiv\{ (0,1,100), (1,2,100), (2,0,100),
+   (2,3,200) \}, A=0, B=3, k=1$  
+   Result: $700$
+2. $N=3, F\equiv \{ (0,1,100), (1,2,100), (0,2,500) \},
+   A=0, B=2, k=1$  
+   Result: $200$
+2. $N=3, F\equiv \{ (0,1,100), (1,2,100), (0,2,500) \},
+   A=0, B=2, k=0$  
+   Result: $500$
+
+## Question 16 ##
+
+There’s a dungeon arranged as a grid of $N\times M$
+rectangular rooms.
+
+$T\in\mathbb{Z}^{N\times M}$ represents for each room
+$(i,j)$, a threshold of **minimum** time $t_{ij}$
+starting from which a **move into** it may be
+initiated.
+
+**Move** is allowed only between two **adjacent** rooms
+that share a common *vertical* or *horizontal* wall,
+and each move takes **1 unit** time duration.
+
+WAP to start from room $(0,0)$ and finally determine
+the minimum time required to reach the room
+$(N-1,M-1)$.
+
+**Examples**
+
+1. $T=[[0,4],[4,4]]$  
+   Result: $6$  
+   Explanation:  
+   $t=4: (0,0)\to(1,0)$;  
+   $t=5: (1,0)\to(1,1)$.
+2. $T=[[0,0,0],[0,0,0]]$  
+   Result: $3$  
+   Explanation:  
+   $t=0: (0,0)\to(1,0)$;  
+   $t=1: (1,0)\to(1,1)$;  
+   $t=1: (1,1)\to(1,1)$.
+2. $T=[[0,1],[1,2]]$  
+   Result: $3$  
+   Explanation:  
+   $t=1: (0,0)\to(1,0)$;  
+   $t=2: (1,0)\to(1,1)$.
+
+[LeetCode #3341][LC3341]
+
+
 ## Glossary ##
 
 ### Loop ###
@@ -161,10 +251,18 @@ A directed graph, where
 
 A binary tree where each node has either two or no children
 
+### DAG ###
+
+(Directed Acyclic Graph)
+
+A directed graph, where there are no back-edges.
+
 <!-- *[WAP]: Write a program or equivalently a python code -->
 
 [LC733]: https://leetcode.com/problems/flood-fill/ "LeetCode Problem #733"
 
 [LC463]: https://leetcode.com/problems/island-perimeter/ "LeetCode Problem #463"
+
+[LC3341]: https://leetcode.com/problems/find-minimum-time-to-reach-last-room-i "LeetCode Problem #3341"
 
 [LOOP]: https://en.wikipedia.org/wiki/Loop_(graph_theory) "Loop in Graph Theory"
