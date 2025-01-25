@@ -1,4 +1,5 @@
-from collections import namedtuple, Enum
+from collections import namedtuple
+from enum import Enum
 
 Graph = namedtuple("Graph", "V,E")
 """Graph DataType. 
