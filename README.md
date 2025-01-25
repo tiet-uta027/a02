@@ -1,32 +1,41 @@
 # Assignment 2
 
-Navigate to and open the notebook in colab.  Please
-write your answers in there.
+There are 16 questions in all, 7 of which are tagged as
+**[PY]**{: .htag }.  You are required to submit
+solutions to **only** 10 questions, 5 of which should
+have been tagged as **[PY]**{: .htag }.
 
-[Notebook](./solutions.ipynb)
+Solutions to the questions tagged as **[PY]**{: .htag }
+shall be a python function.  Other questions are more
+conceptual in nature, and their solutions may be an
+algorithm/ pseudocode/ python function, as per your
+discretion.
 
-## Question 1
+[For submission details, click
+here.](#submission-details)
+
+## Question 1 ##
 Given the following undirected graph, perform a BFS as
-well as DFS starting from vertex A. List the order in
+well as DFS starting from vertex $A$. List the order in
 which the vertices are visited.
 
 $\{A-B,\; A-C,\; B-D,\; C-D,\; D-E\}$
 
-## Question 2
+## Question 2 ##
 
 Given the following directed graph, **algorithmically**
 determine if it is a DAG. If it is not, explain why.
 
 $\{A\to B,\; B\to C,\; C\to A,\; B\to D\}$
 
-## Question 3
+## Question 3 ##
 
 Given the following DAG, **algorithmically** perform a
 topological sort.  
 
 $\{A\to B,\; A\to C,\; B\to D,\; C\to D\}$
 
-## Question 4
+## Question 4 **[PY]**{: .htag } ##
 
 Given a weighted vertex graph $G(V,E)$, a start node
 $s$ and a target sum $\sigma$.
@@ -39,13 +48,13 @@ equals the target sum.
 Note: $\forall v \in V\; \exists v.w$ that
 represents vertex weights.
 
-## Question 5
+## Question 5 ##
 
 WAP to traverse [a binary tree](#binary-tree "Glossary
 for Binary Tree") using BFS.  Illustrate with necessary
 examples.
 
-## Question 6 ##
+## Question 6 **[PY]**{: .htag } ##
 
 Given two binary trees, $A,B$, WAP to compute a merge
 operation defined as follows:
@@ -74,9 +83,10 @@ Given a binary tree, $B$ find its min, max and average
 depths.
 
 **PS:** Depth of a tree is defined by the distance of
-leaf nodes from the root.
+leaf nodes from the root, not that of any intermediary
+nodes.
 
-## Question 9 ##
+## Question 9 **[PY]**{: .htag } ##
 
 Given an image $M\in\mathbb{Z}^{H\times W}$ represented
 as a grid (or matrix) of $H\times W$ of integers, where
@@ -84,7 +94,7 @@ $m_{ij}$ represents the pixel value of $i$-th row,
 $j$-th column.
 
 1. WAP to flood-fill colour $\kappa$ starting at pixel
-   at $s_r$-th row and $s_c$-th column.
+   at $r$-th row and $c$-th column.
    
 2. Reflect on the relative merits of using BFS/DFS for
    the process.
@@ -107,15 +117,16 @@ $j$-th column.
 ## Question 10 ##
 
 Given an undirected graph $G(V,E)$ without
-[self-loops][LOOP], and a pair $(s,d)$ of source and
+[self-loops](#loop), and a pair $(s,d)$ of source and
 destination vertices, determine if a path between them
 exists in the graph.
 
-## Question 11 ##
+## Question 11 **[PY]**{: .htag } ##
 
 **Evaluate a Boolean Binary Tree**
 
 Given a full binary tree $B$ such that,
+
 + Leaf nodes bear binary truth values, i.e. `True` or
   `False`; and 
 + Non leaf nodes bear values that represent logic
@@ -127,23 +138,26 @@ the result.
 ![](./assets/boolean-binary-tree.png "Example Boolean
 Binary Tree")
 
-## Question 12 ##
+## Question 12 **[PY]**{: .htag } ##
 
 **Island Perimeter**
 
 Given a binary rectangular grid $M\in\{0,1\}^{H\times
 W}$ with $H$ rows and $W$ columns, where each pixel
 $m_{ij}$ represents either $0$ for water or $1$ for
-land.  Assume _a)_ that there’s exactly one island
-(contiguously connected land cells), _b)_ that pixels
-are connected either vertically or horizontally but not
-diagonally, and _c)_ that there’re no lakes.
+land.  Assume that
+
+1. There’s exactly one island (contiguously connected
+   land cells);
+2. Pixels are connected either vertically or
+   horizontally but not diagonally; and
+3. There are no lakes.
 
 WAP to determine the perimeter of the island!
 
 [LeetCode #463][LC463]
 
-## Question 13 ##
+## Question 13 **[PY]**{: .htag } ##
 
 Given $N$ courses labelled $\{0,\ldots,N-1\}$ and a
 list of prerequisites $R$ such that the courses
@@ -155,6 +169,7 @@ completed successfully by a candidate.  If so, also
 determine one of the feasible ordering of courses.
 
 **Examples**
+
 1. $N=2$, $R=[\emptyset,\{0\}]$ means that course $1$
    requires course $0$ as pre-requisite.  Hence, it is
    possible to complete the courses, in the following
@@ -168,7 +183,7 @@ determine one of the feasible ordering of courses.
 Given a [DAG](#dag) $G(V,E)$, WAP to determine the list
 of ancestors for each node.
 
-## Question 15 ##
+## Question 15 **[PY]**{: .htag } ##
 
 There are $N$ cities, connected by flights.  Given the
 list of flights $F\equiv\{(s_i,d_i,p_i):0<i\leqslant
@@ -232,6 +247,9 @@ $(N-1,M-1)$.
 
 [LeetCode #3341][LC3341]
 
+## Submission Details ##
+
+**[TODO]**{: .htag }
 
 ## Glossary ##
 
@@ -257,7 +275,11 @@ A binary tree where each node has either two or no children
 
 A directed graph, where there are no back-edges.
 
-<!-- *[WAP]: Write a program or equivalently a python code -->
+*[WAP]: Write a program or equivalently a python program
+*[DAG]: Directed Acyclic Graph
+*[BFS]: Breadth First Search
+*[DFS]: Depth First Search
+*[PY]: Submit the solution as Python Function
 
 [LC733]: https://leetcode.com/problems/flood-fill/ "LeetCode Problem #733"
 
