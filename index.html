@@ -1,0 +1,1380 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+        <link rel="next" href="solutions-desc/">
+      
+      
+      <link rel="icon" href="assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.50">
+    
+    
+  <title>A01 Predicate Calculus &bull; UTA027:
+    Artificial Intelligence &bull; Raghav
+    B. Venkataramaiyer @TIET</title>
+
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.a40c8224.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="assets/stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="amber" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#assignment-2" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="A02 Graph Methods &amp;bull; UTA027: Artificial Intelligence" class="md-header__button md-logo" aria-label="A02 Graph Methods &bull; UTA027: Artificial Intelligence" data-md-component="logo">
+      
+  <img src="assets/tiet-logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            A02 Graph Methods &bull; UTA027: Artificial Intelligence
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Assignment 2
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/tiet-uta027/a02" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    tiet-uta027/a02
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="A02 Graph Methods &amp;bull; UTA027: Artificial Intelligence" class="md-nav__button md-logo" aria-label="A02 Graph Methods &bull; UTA027: Artificial Intelligence" data-md-component="logo">
+      
+  <img src="assets/tiet-logo.svg" alt="logo">
+
+    </a>
+    A02 Graph Methods &bull; UTA027: Artificial Intelligence
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/tiet-uta027/a02" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    tiet-uta027/a02
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Assignment 2
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Assignment 2
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#question-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Question 1
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#question-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Question 2
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#question-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Question 3
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#question-4-py" class="md-nav__link">
+    <span class="md-ellipsis">
+      Question 4 [PY]
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#question-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Question 5
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#question-6-py" class="md-nav__link">
+    <span class="md-ellipsis">
+      Question 6 [PY]
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#question-7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Question 7
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#question-8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Question 8
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#question-9-py" class="md-nav__link">
+    <span class="md-ellipsis">
+      Question 9 [PY]
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#question-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      Question 10
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#question-11-py" class="md-nav__link">
+    <span class="md-ellipsis">
+      Question 11 [PY]
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#question-12-py" class="md-nav__link">
+    <span class="md-ellipsis">
+      Question 12 [PY]
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#question-13-py" class="md-nav__link">
+    <span class="md-ellipsis">
+      Question 13 [PY]
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#question-14" class="md-nav__link">
+    <span class="md-ellipsis">
+      Question 14
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#question-15-py" class="md-nav__link">
+    <span class="md-ellipsis">
+      Question 15 [PY]
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#question-16" class="md-nav__link">
+    <span class="md-ellipsis">
+      Question 16
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#submission-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      Submission Details
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#glossary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Glossary
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Glossary">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#loop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Loop
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#binary-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      Binary Tree
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#full-binary-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      Full Binary Tree
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dag" class="md-nav__link">
+    <span class="md-ellipsis">
+      DAG
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="solutions-desc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Descriptive Solutions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="solutions/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Solutions
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Solutions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="solutions/example/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Example
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="solutions/q01VertexOrder/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    q01VertexOrder
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="solutions/q02IsDagP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    q02IsDagP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="solutions/q03TopologicalSort/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    q03TopologicalSort
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="solutions/q04IsPathSumP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    q04IsPathSumP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="solutions/q05BinaryTreeBfs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    q05BinaryTreeBfs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="solutions/q06MergeBinaryTrees/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    q06MergeBinaryTrees
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="solutions/q07ListBfsOrder/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    q07ListBfsOrder
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="solutions/q08BinaryTreeDepthStats/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    q08BinaryTreeDepthStats
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="solutions/q09FloodFill/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    q09FloodFill
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="solutions/q10ExistsPathP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    q10ExistsPathP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="solutions/q11EvalBooleanBinaryTreeP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    q11EvalBooleanBinaryTreeP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="solutions/q12GetIslandPerimeter/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    q12GetIslandPerimeter
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="solutions/q13FulfilProgramP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    q13FulfilProgramP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="solutions/q14GetAllAncestors/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    q14GetAllAncestors
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="solutions/q15GetCheapestFlight/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    q15GetCheapestFlight
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="solutions/q16DungeonCrossingTimeMin/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    q16DungeonCrossingTimeMin
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_18" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="solutions/cli/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Cli
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3_18" id="__nav_3_18_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_18_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_18">
+            <span class="md-nav__icon md-icon"></span>
+            Cli
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="solutions/cli/add_one/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Add one
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="assignment-2">Assignment 2</h1>
+<p>There are 16 questions in all, 7 of which are tagged as
+<strong class="htag">[<abbr title="Submit the solution as Python Function">PY</abbr>]</strong>.  You are required to submit
+solutions to <strong>only</strong> 10 questions, 5 of which should
+have been tagged as <strong class="htag">[<abbr title="Submit the solution as Python Function">PY</abbr>]</strong>.</p>
+<p>Solutions to the questions tagged as <strong class="htag">[<abbr title="Submit the solution as Python Function">PY</abbr>]</strong>
+shall be a python function.  Other questions are more
+conceptual in nature, and their solutions may be an
+algorithm/ pseudocode/ python function, as per your
+discretion.</p>
+<p><a href="#submission-details">For submission details, click
+here.</a></p>
+<h2 id="question-1">Question 1</h2>
+<p>Given the following undirected graph, perform a <abbr title="Breadth First Search">BFS</abbr> as
+well as <abbr title="Depth First Search">DFS</abbr> starting from vertex <span class="arithmatex">\(A\)</span>. List the order in
+which the vertices are visited.</p>
+<p><span class="arithmatex">\(\{A-B,\; A-C,\; B-D,\; C-D,\; D-E\}\)</span></p>
+<h2 id="question-2">Question 2</h2>
+<p>Given the following directed graph, <strong>algorithmically</strong>
+determine if it is a <abbr title="Directed Acyclic Graph">DAG</abbr>. If it is not, explain why.</p>
+<p><span class="arithmatex">\(\{A\to B,\; B\to C,\; C\to A,\; B\to D\}\)</span></p>
+<h2 id="question-3">Question 3</h2>
+<p>Given the following <abbr title="Directed Acyclic Graph">DAG</abbr>, <strong>algorithmically</strong> perform a
+topological sort.  </p>
+<p><span class="arithmatex">\(\{A\to B,\; A\to C,\; B\to D,\; C\to D\}\)</span></p>
+<h2 id="question-4-py">Question 4 <strong class="htag">[<abbr title="Submit the solution as Python Function">PY</abbr>]</strong></h2>
+<p>Given a weighted vertex graph <span class="arithmatex">\(G(V,E)\)</span>, a start node
+<span class="arithmatex">\(s\)</span> and a target sum <span class="arithmatex">\(\sigma\)</span>.</p>
+<p><strong>Write an algorithm, or equivalently a python program
+(<abbr title="Write a program or equivalently a python program">WAP</abbr>)</strong> to inspect if there is a path from <span class="arithmatex">\(s\)</span> such
+that adding up all the vertex weights along the path,
+equals the target sum.</p>
+<p>Note: <span class="arithmatex">\(\forall v \in V\; \exists v.w\)</span> that
+represents vertex weights.</p>
+<h2 id="question-5">Question 5</h2>
+<p><abbr title="Write a program or equivalently a python program">WAP</abbr> to traverse <a href="#binary-tree" title="Glossary for Binary Tree">a binary tree</a> using <abbr title="Breadth First Search">BFS</abbr>.  Illustrate with necessary
+examples.</p>
+<h2 id="question-6-py">Question 6 <strong class="htag">[<abbr title="Submit the solution as Python Function">PY</abbr>]</strong></h2>
+<p>Given two binary trees, <span class="arithmatex">\(A,B\)</span>, <abbr title="Write a program or equivalently a python program">WAP</abbr> to compute a merge
+operation defined as follows:</p>
+<p>Imagine that one is put on to cover the other; some
+nodes overlap, while others don’t.  The merge rule
+states that for each position in the binary tree, if
+two nodes overlap, the value of the merged node is
+their sum; otherwise, it’s the value of not null
+node. <em>E.g.</em></p>
+<p><img alt="" src="assets/q6.png" /></p>
+<h2 id="question-7">Question 7</h2>
+<p>If the following paths completely describe a given
+<strong>undirected</strong> graph, show one possible order of nodes
+visited through <abbr title="Breadth First Search">BFS</abbr>.</p>
+<p><span class="arithmatex">\(M-N-O-P-Q\)</span><br />
+<span class="arithmatex">\(N-Q-M-R\)</span></p>
+<h2 id="question-8">Question 8</h2>
+<p>Given a binary tree, <span class="arithmatex">\(B\)</span> find its min, max and average
+depths.</p>
+<p><strong>PS:</strong> Depth of a tree is defined by the distance of
+leaf nodes from the root, not that of any intermediary
+nodes.</p>
+<h2 id="question-9-py">Question 9 <strong class="htag">[<abbr title="Submit the solution as Python Function">PY</abbr>]</strong></h2>
+<p>Given an image <span class="arithmatex">\(M\in\mathbb{Z}^{H\times W}\)</span> represented
+as a grid (or matrix) of <span class="arithmatex">\(H\times W\)</span> of integers, where
+<span class="arithmatex">\(m_{ij}\)</span> represents the pixel value of <span class="arithmatex">\(i\)</span>-th row,
+<span class="arithmatex">\(j\)</span>-th column.</p>
+<ol>
+<li>
+<p><abbr title="Write a program or equivalently a python program">WAP</abbr> to flood-fill colour <span class="arithmatex">\(\kappa\)</span> starting at pixel
+   at <span class="arithmatex">\(r\)</span>-th row and <span class="arithmatex">\(c\)</span>-th column.</p>
+</li>
+<li>
+<p>Reflect on the relative merits of using <abbr title="Breadth First Search">BFS</abbr>/<abbr title="Depth First Search">DFS</abbr> for
+   the process.</p>
+</li>
+</ol>
+<p><strong>Flood Fill</strong></p>
+<ul>
+<li>Flood fill is a process to change the colour of a
+  contiguous region, by starting with a given source
+  pixel and expanding along the neighbours until a
+  boundary is hit.</li>
+<li>Region is defined by colour of the start pixel.</li>
+<li>Neighbours shares a boundary (either vertically or
+  horizontally).</li>
+<li>A neighbour with colour different than that of the
+  start pixel is deemed to be a boundary; it’s colour
+  is left untouched!</li>
+</ul>
+<p><a href="https://leetcode.com/problems/flood-fill/" title="LeetCode Problem #733">LeetCode #733</a></p>
+<h2 id="question-10">Question 10</h2>
+<p>Given an undirected graph <span class="arithmatex">\(G(V,E)\)</span> without
+<a href="#loop">self-loops</a>, and a pair <span class="arithmatex">\((s,d)\)</span> of source and
+destination vertices, determine if a path between them
+exists in the graph.</p>
+<h2 id="question-11-py">Question 11 <strong class="htag">[<abbr title="Submit the solution as Python Function">PY</abbr>]</strong></h2>
+<p><strong>Evaluate a Boolean Binary Tree</strong></p>
+<p>Given a full binary tree <span class="arithmatex">\(B\)</span> such that,</p>
+<ul>
+<li>Leaf nodes bear binary truth values, i.e. <code>True</code> or
+  <code>False</code>; and </li>
+<li>Non leaf nodes bear values that represent logic
+  gates, namely <code>AND</code> or <code>OR</code>.</li>
+</ul>
+<p><abbr title="Write a program or equivalently a python program">WAP</abbr> to evaluate the boolean binary tree <span class="arithmatex">\(B\)</span> and return
+the result.</p>
+<p><img alt="" src="assets/boolean-binary-tree.png" title="Example Boolean Binary Tree" /></p>
+<h2 id="question-12-py">Question 12 <strong class="htag">[<abbr title="Submit the solution as Python Function">PY</abbr>]</strong></h2>
+<p><strong>Island Perimeter</strong></p>
+<p>Given a binary rectangular grid <span class="arithmatex">\(M\in\{0,1\}^{H\times
+W}\)</span> with <span class="arithmatex">\(H\)</span> rows and <span class="arithmatex">\(W\)</span> columns, where each pixel
+<span class="arithmatex">\(m_{ij}\)</span> represents either <span class="arithmatex">\(0\)</span> for water or <span class="arithmatex">\(1\)</span> for
+land.  Assume that</p>
+<ol>
+<li>There’s exactly one island (contiguously connected
+   land cells);</li>
+<li>Pixels are connected either vertically or
+   horizontally but not diagonally; and</li>
+<li>There are no lakes.</li>
+</ol>
+<p><abbr title="Write a program or equivalently a python program">WAP</abbr> to determine the perimeter of the island!</p>
+<p><a href="https://leetcode.com/problems/island-perimeter/" title="LeetCode Problem #463">LeetCode #463</a></p>
+<h2 id="question-13-py">Question 13 <strong class="htag">[<abbr title="Submit the solution as Python Function">PY</abbr>]</strong></h2>
+<p>Given <span class="arithmatex">\(N\)</span> courses labelled <span class="arithmatex">\(\{0,\ldots,N-1\}\)</span> and a
+list of prerequisites <span class="arithmatex">\(R\)</span> such that the courses
+<span class="arithmatex">\(R[i]\equiv\{a_i,b_i,\ldots\}\)</span> are required to be
+completed before enrolling for <span class="arithmatex">\(i\)</span>-th course.</p>
+<p><abbr title="Write a program or equivalently a python program">WAP</abbr> to determine if all the <span class="arithmatex">\(N\)</span> courses can be
+completed successfully by a candidate.  If so, also
+determine one of the feasible ordering of courses.</p>
+<p><strong>Examples</strong></p>
+<ol>
+<li><span class="arithmatex">\(N=2\)</span>, <span class="arithmatex">\(R=[\emptyset,\{0\}]\)</span> means that course <span class="arithmatex">\(1\)</span>
+   requires course <span class="arithmatex">\(0\)</span> as pre-requisite.  Hence, it is
+   possible to complete the courses, in the following
+   order: <span class="arithmatex">\([0,1]\)</span>.</li>
+<li><span class="arithmatex">\(N=2\)</span>, <span class="arithmatex">\(R=[\{1\},\{0\}]\)</span>. Here, the requirement is
+   <span class="arithmatex">\(1\)</span> before <span class="arithmatex">\(0\)</span>; and also <span class="arithmatex">\(0\)</span> before <span class="arithmatex">\(1\)</span>.  This,
+   hence, is impossible.</li>
+</ol>
+<h2 id="question-14">Question 14</h2>
+<p>Given a <a href="#dag"><abbr title="Directed Acyclic Graph">DAG</abbr></a> <span class="arithmatex">\(G(V,E)\)</span>, <abbr title="Write a program or equivalently a python program">WAP</abbr> to determine the list
+of ancestors for each node.</p>
+<h2 id="question-15-py">Question 15 <strong class="htag">[<abbr title="Submit the solution as Python Function">PY</abbr>]</strong></h2>
+<p>There are <span class="arithmatex">\(N\)</span> cities, connected by flights.  Given the
+list of flights <span class="arithmatex">\(F\equiv\{(s_i,d_i,p_i):0&lt;i\leqslant
+N\}\)</span> so that <span class="arithmatex">\(i\)</span>-th flight connects the source city
+<span class="arithmatex">\(s_i\)</span> to destination city <span class="arithmatex">\(d_i\)</span> for a cost-price of
+<span class="arithmatex">\(p_i\)</span>.</p>
+<p>Given <span class="arithmatex">\(A,B,k\)</span>, <abbr title="Write a program or equivalently a python program">WAP</abbr> to determine <strong>the cheapest price</strong>
+to connect city <span class="arithmatex">\(A\)</span> to city <span class="arithmatex">\(B\)</span> with maximum <span class="arithmatex">\(k\)</span> stops.</p>
+<p><img alt="" src="assets/flights.png" /></p>
+<p><strong>Examples</strong> (Optimal paths marked in red)</p>
+<ol>
+<li><span class="arithmatex">\(N=4, F\equiv\{ (0,1,100), (1,2,100), (2,0,100),
+   (2,3,200) \}, A=0, B=3, k=1\)</span><br />
+   Result: <span class="arithmatex">\(700\)</span></li>
+<li><span class="arithmatex">\(N=3, F\equiv \{ (0,1,100), (1,2,100), (0,2,500) \},
+   A=0, B=2, k=1\)</span><br />
+   Result: <span class="arithmatex">\(200\)</span></li>
+<li><span class="arithmatex">\(N=3, F\equiv \{ (0,1,100), (1,2,100), (0,2,500) \},
+   A=0, B=2, k=0\)</span><br />
+   Result: <span class="arithmatex">\(500\)</span></li>
+</ol>
+<h2 id="question-16">Question 16</h2>
+<p>There’s a dungeon arranged as a grid of <span class="arithmatex">\(N\times M\)</span>
+rectangular rooms.</p>
+<p><span class="arithmatex">\(T\in\mathbb{Z}^{N\times M}\)</span> represents for each room
+<span class="arithmatex">\((i,j)\)</span>, a threshold of <strong>minimum</strong> time <span class="arithmatex">\(t_{ij}\)</span>
+starting from which a <strong>move into</strong> it may be
+initiated.</p>
+<p><strong>Move</strong> is allowed only between two <strong>adjacent</strong> rooms
+that share a common <em>vertical</em> or <em>horizontal</em> wall,
+and each move takes <strong>1 unit</strong> time duration.</p>
+<p><abbr title="Write a program or equivalently a python program">WAP</abbr> to start from room <span class="arithmatex">\((0,0)\)</span> and finally determine
+the minimum time required to reach the room
+<span class="arithmatex">\((N-1,M-1)\)</span>.</p>
+<p><strong>Examples</strong></p>
+<ol>
+<li><span class="arithmatex">\(T=[[0,4],[4,4]]\)</span><br />
+   Result: <span class="arithmatex">\(6\)</span><br />
+   Explanation:<br />
+<span class="arithmatex">\(t=4: (0,0)\to(1,0)\)</span>;<br />
+<span class="arithmatex">\(t=5: (1,0)\to(1,1)\)</span>.</li>
+<li><span class="arithmatex">\(T=[[0,0,0],[0,0,0]]\)</span><br />
+   Result: <span class="arithmatex">\(3\)</span><br />
+   Explanation:<br />
+<span class="arithmatex">\(t=0: (0,0)\to(1,0)\)</span>;<br />
+<span class="arithmatex">\(t=1: (1,0)\to(1,1)\)</span>;<br />
+<span class="arithmatex">\(t=1: (1,1)\to(1,1)\)</span>.</li>
+<li><span class="arithmatex">\(T=[[0,1],[1,2]]\)</span><br />
+   Result: <span class="arithmatex">\(3\)</span><br />
+   Explanation:<br />
+<span class="arithmatex">\(t=1: (0,0)\to(1,0)\)</span>;<br />
+<span class="arithmatex">\(t=2: (1,0)\to(1,1)\)</span>.</li>
+</ol>
+<p><a href="https://leetcode.com/problems/find-minimum-time-to-reach-last-room-i" title="LeetCode Problem #3341">LeetCode #3341</a></p>
+<h2 id="submission-details">Submission Details</h2>
+<p><strong class="htag">[TODO]</strong></p>
+<h2 id="glossary">Glossary</h2>
+<h3 id="loop">Loop</h3>
+<p>An edge from a vertex to its own self.</p>
+<h3 id="binary-tree">Binary Tree</h3>
+<p>A directed graph, where</p>
+<ul>
+<li>There’s a fixed start node called <strong>root</strong>;</li>
+<li>Each node may have upto two children; and</li>
+<li>The node with no children is called a <strong>leaf</strong>.</li>
+</ul>
+<h3 id="full-binary-tree">Full Binary Tree</h3>
+<p>A binary tree where each node has either two or no children</p>
+<h3 id="dag"><abbr title="Directed Acyclic Graph">DAG</abbr></h3>
+<p>(Directed Acyclic Graph)</p>
+<p>A directed graph, where there are no back-edges.</p>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 26, 2025</span>
+  </span>
+
+    
+    
+    
+      
+  
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Contributors">
+      
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4 4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4"/></svg>
+      
+    </span>
+    <nav>
+      
+        <a href="mailto:bvraghav@gmail.com">Raghav B. Venkataramaiyer</a>
+    </nav>
+  </span>
+
+    
+    
+      
+  <span class="md-source-file__fact">
+    
+      
+  <span class="md-icon" title="Contributors">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"/></svg>
+  </span>
+  <span>GitHub</span>
+
+    
+    <nav>
+      
+        <a href="https://github.com/bvraghav" class="md-author" title="@bvraghav">
+          
+          <img src="https://avatars.githubusercontent.com/u/14331962?v=4&size=72" alt="bvraghav">
+        </a>
+      
+      
+      
+    </nav>
+  </span>
+
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+        
+          
+          <a href="solutions-desc/" class="md-footer__link md-footer__link--next" aria-label="Next: Descriptive Solutions">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Descriptive Solutions
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025 <a href='https://bvraghav.com/'>Raghav B. Venkataramaiyer</a> &lt;<code style='color:inherit; background:transparent'>bv.raghav</code>&gt;
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/tiet-uta027/a02.git" target="_blank" rel="noopener" title="Git Repo for Assignment A02" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.footer", "header.autohide", "content.tabs.link", "navigation.tracking", "navigation.top", "toc.integrate"], "search": "assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.60a45f97.min.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      
+        <script src="javascript/arithmatex.js"></script>
+      
+    
+  </body>
+</html>
