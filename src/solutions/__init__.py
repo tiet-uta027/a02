@@ -1,5 +1,6 @@
 from collections import namedtuple
 from enum import Enum
+from argparse import Namespace as NS
 
 Graph = namedtuple("Graph", "V,E")
 """Graph DataType. 
@@ -34,4 +35,13 @@ Args:
   s: Source City.
   d: Destination City.
   p: Cost Price of the flight.
+"""
+
+meta = NS(
+  rollNo='',
+  name='',
+  group='',
+  email='',
+)
+"""Details to be filled in by student before submission.
 """
